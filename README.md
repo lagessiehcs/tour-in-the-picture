@@ -1,5 +1,5 @@
 # Tour Into The Picture
-Under development
+This project constructs a 3D room from a 2D image
 
 # Source
 http://graphics.cs.cmu.edu/courses/15-463/2006_fall/www/Papers/TIP.pdf
