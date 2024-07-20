@@ -19,7 +19,7 @@ line(ax, rearWall(1,:), rearWall(2,:), "Color", "r", "LineWidth", 3);
 
 scatter(ax, twelfPoints(1,:),twelfPoints(2,:), 60, "green", "filled")
 scatter(ax, vanishingPoint(1), vanishingPoint(2),  60, "green", "filled")
-names = {"vP","P1","P2","P3","P4","P5","P6","P7","P8","P9","P10","P11","P12"};
+names = {"VP","P1","P2","P3","P4","P5","P6","P7","P8","P9","P10","P11","P12"};
 
 for i = 1:12
     text(ax, [vanishingPoint(1) twelfPoints(1,:)], [vanishingPoint(2) twelfPoints(2,:)], names, ...
