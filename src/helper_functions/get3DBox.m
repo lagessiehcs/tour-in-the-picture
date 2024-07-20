@@ -24,6 +24,9 @@ leftDepth    = ((x(3)-xvp)*(x(5)-x(1))) / ((x(5)-xvp)*(x(3)-x(1))) * floorDepth;
 ceilingDepth = ((x(11)-xvp)*(x(9)-x(7))) / ((x(9)-xvp)*(x(11)-x(7))) * leftDepth; % Depth of the left wall
 rightDepth   = ((x(10)-xvp)*(x(12)-x(8))) / ((x(12)-xvp)*(x(10)-x(8))) * ceilingDepth; % Depth of the left wall
 
+leftDepth = abs(leftDepth);
+ceilingDepth = abs(ceilingDepth);
+rightDepth = abs(rightDepth);
 
 %% Point 1,2,7,8
 twelfPoints3D(:,1) = [0; 0; 0];

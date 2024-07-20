@@ -9,19 +9,19 @@ function get3DRoom(texture, twelfPoints, ax)
     z = twelfPoints(:, 3);
     
     surface([x(7), x(8); x(1), x(2)], [y(7), y(8); y(1), y(2)], [z(7), z(8); z(1), z(2)], ...
-        'FaceColor', 'texturemap', 'CData', texture.Rear, 'Parent', ax);
+        'FaceColor', 'texturemap', 'CData', texture.Rear, 'EdgeColor', 'none', 'Parent', ax);
 
     surface([x(9), x(10); x(7), x(8)], [y(9), y(10); y(7), y(8)], [z(9), z(10); z(7), z(8)], ...
-        'FaceColor', 'texturemap', 'CData', texture.Ceiling, 'Parent', ax);
+        'FaceColor', 'texturemap', 'CData', texture.Ceiling, 'EdgeColor', 'none', 'Parent', ax);
 
     surface([x(1), x(2); x(3), x(4)], [y(1), y(2); y(3), y(4)], [z(1), z(2); z(3), z(4)], ...
-        'FaceColor', 'texturemap', 'CData', texture.Floor, 'Parent', ax);
+        'FaceColor', 'texturemap', 'CData', texture.Floor, 'EdgeColor', 'none', 'Parent', ax);
 
     surface([x(11), x(7); x(5), x(1)], [y(11), y(7); y(5), y(1)], [z(11), z(7); z(5), z(1)], ...
-        'FaceColor', 'texturemap', 'CData', texture.Left, 'Parent', ax);
+        'FaceColor', 'texturemap', 'CData', texture.Left, 'EdgeColor', 'none', 'Parent', ax);
 
     surface([x(8), x(12); x(2), x(6)], [y(8), y(12); y(2), y(6)], [z(8), z(12); z(2), z(6)], ...
-        'FaceColor', 'texturemap', 'CData', texture.Right, 'Parent', ax);
+        'FaceColor', 'texturemap', 'CData', texture.Right, 'EdgeColor', 'none', 'Parent', ax);
     
     axis(ax, 'equal');
     axis(ax, 'vis3d');
