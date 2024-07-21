@@ -28,9 +28,12 @@ function get3DRoom(texture, twelfPoints, ax)
     axis(ax, 'off');
     camproj(ax, 'perspective');
     camva(ax, 'auto');
-    % camup(ax, [0, -1, 0]);
-    % view(ax, [0, -1, 0]);
+    % camup(ax, [0, 1, 0]);
     
+    % view([0, 1, 0]);
+    % set(ax, 'YDir', 'normal');
+    % view(ax, 135, 45);
+
     rotate3d(ax, "on");
     % campos([0, 0, -100])
 end
