@@ -1,9 +1,10 @@
 classdef Screens < uint8
     enumeration
-        AddImage               (1) 
-        ChooseForeground       (2)
-        SeparateWallBackground (3)
-        ViewRoomAndAnimation   (4)
+        AddImage               (1)
+        RotateImage            (2)
+        ChooseForeground       (3)
+        SeparateWallBackground (4)
+        ViewRoomAndAnimation   (5)
     end
 end
 
