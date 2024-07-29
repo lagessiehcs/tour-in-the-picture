@@ -1,4 +1,4 @@
-function twelfPoints3D = get3DBox(twelfPoints2D, vanishingPoint, IR_height, IR_width)
+function twelfPoints3D = get12Points3D(twelfPoints2D, vanishingPoint, IR_height, IR_width)
 %GET3DBOX - Thsi function condtruct a 3D box from the 12 generated points
 %   To do this, the depth of the floor into the picture is assumed. The
 %   coordination origin of the box is at the bottom left corner of the rear
@@ -18,11 +18,11 @@ xvp = vanishingPoint(1);
 %% Get the depth of the remaining plane
 % The cross ratio was used for this purpose. For example if A, B, C, D are
 % colinear and A is the vanishing point of that line, the the cross ratio
-% (A,B;C,D) = (AC*BD)/(BC*AD) willl give you BD/BC
+% (A,B;C,D) = (AC*BD)/(BC*AD) willl give you BD/BC 
 
-leftDepth    = ((x(3)-xvp)*(x(5)-x(1))) / ((x(5)-xvp)*(x(3)-x(1))) * floorDepth;   % Depth of the left wall
-ceilingDepth = ((x(11)-xvp)*(x(9)-x(7))) / ((x(9)-xvp)*(x(11)-x(7))) * leftDepth; % Depth of the left wall
-rightDepth   = ((x(10)-xvp)*(x(12)-x(8))) / ((x(12)-xvp)*(x(10)-x(8))) * ceilingDepth; % Depth of the left wall
+leftDepth    = get3DLength(xvp, x(1), x(3), x(5), floorDepth); % Depth of the left wall
+ceilingDepth = get3DLength(xvp, x(7), x(11), x(9), leftDepth); % Depth of the left wall
+rightDepth   = get3DLength(xvp, x(8), x(10), x(12), ceilingDepth); % Depth of the left wall
 
 leftDepth = abs(leftDepth);
 ceilingDepth = abs(ceilingDepth);
