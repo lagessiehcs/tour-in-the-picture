@@ -3,7 +3,11 @@ This project constructs a 3D room from a 2D image.
 ## Instruction
 Run the file main.m and follow the instruction in the app.
 ## Demo
-![Demo GIF](../animation/animation.gif)
+<p align="left">
+  <img src="./images/oil-painting.png" alt="Image 1" width="400"/>
+  <img src="./animation/animation.gif" alt="Image 2" width="360"/>
+</p>
+
 ## Source
 
 http://graphics.cs.cmu.edu/courses/15-463/2006_fall/www/Papers/TIP.pdf
