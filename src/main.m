@@ -1,2 +1,5 @@
-addpath('icons')
-run('GUI.mlapp')
+close all
+clear
+clc
+
+GUI
