@@ -20,13 +20,13 @@ function startAnimation(ax, VanishingPoint3D, TwelfPoints3D)
 
     % Prepare GIF
     gifFilename = '../animation/animation.gif';
-    delayTime = 0.05; % Delay time for each frame
+    delayTime = 0; % Delay time for each frame
 
     % zoom in
     for z = Zubound:-5:Zlbound
         campos(ax, [center(1), center(2), z]);
         drawnow;
-        pause(0.05)
+        pause(0)
         frame = getframe(ax);
         im = frame2im(frame);
         [imind, cm] = rgb2ind(im, 256);
@@ -41,7 +41,7 @@ function startAnimation(ax, VanishingPoint3D, TwelfPoints3D)
     for y = 0:-5:-Ybound
         campos(ax, [center(1), center(2)+y, Zlbound]);
         drawnow;
-        pause(0.05)
+        pause(0)
         frame = getframe(ax);
         im = frame2im(frame);
         [imind, cm] = rgb2ind(im, 256);
@@ -52,7 +52,7 @@ function startAnimation(ax, VanishingPoint3D, TwelfPoints3D)
     for y = -Ybound:5:Ybound
         campos(ax, [center(1), center(2)+y, Zlbound]);
         drawnow;
-        pause(0.05)
+        pause(0)
         frame = getframe(ax);
         im = frame2im(frame);
         [imind, cm] = rgb2ind(im, 256);
@@ -63,7 +63,7 @@ function startAnimation(ax, VanishingPoint3D, TwelfPoints3D)
     for y = Ybound:-5:0
         campos(ax, [center(1), center(2)+y, Zlbound]);
         drawnow;
-        pause(0.05)
+        pause(0)
         frame = getframe(ax);
         im = frame2im(frame);
         [imind, cm] = rgb2ind(im, 256);
@@ -75,7 +75,7 @@ function startAnimation(ax, VanishingPoint3D, TwelfPoints3D)
         campos(ax, [center(1)+x, center(2), Zlbound]);
         camtarget(ax, [center(1)+x, center(2), VanishingPoint3D(3)]);
         drawnow;
-        pause(0.05)
+        pause(0)
         frame = getframe(ax);
         im = frame2im(frame);
         [imind, cm] = rgb2ind(im, 256);
@@ -87,7 +87,7 @@ function startAnimation(ax, VanishingPoint3D, TwelfPoints3D)
         campos(ax, [center(1)+x, center(2), Zlbound]);
         camtarget(ax, [center(1)+x, center(2), VanishingPoint3D(3)]);
         drawnow;
-        pause(0.05)
+        pause(0)
         frame = getframe(ax);
         im = frame2im(frame);
         [imind, cm] = rgb2ind(im, 256);
@@ -99,7 +99,7 @@ function startAnimation(ax, VanishingPoint3D, TwelfPoints3D)
         campos(ax, [center(1)+x, center(2), Zlbound]);
         camtarget(ax, [center(1)+x, center(2), VanishingPoint3D(3)]);
         drawnow;
-        pause(0.05)
+        pause(0)
         frame = getframe(ax);
         im = frame2im(frame);
         [imind, cm] = rgb2ind(im, 256);
@@ -110,7 +110,7 @@ function startAnimation(ax, VanishingPoint3D, TwelfPoints3D)
     for z = Zlbound:-5:Zubound
         campos(ax, [center(1), center(2), z]);
         drawnow;
-        pause(0.05)
+        pause(0)
         frame = getframe(ax);
         im = frame2im(frame);
         [imind, cm] = rgb2ind(im, 256);
